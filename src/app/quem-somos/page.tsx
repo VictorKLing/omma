@@ -4,7 +4,7 @@ const Page = () => {
             {/* Sobre */}
             <section id="sobre" className="relative overflow-hidden">
                 <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-yellow-500/10 blur-3xl"></div>
-                <div className="mx-auto max-w-7xl px-4 py-16 md:pb-24 md:pt-[178px] grid md:grid-cols-2 gap-10 items-center">
+                <div className="mx-auto max-w-7xl px-4 pt-[178px] pb-8 md:pb-24 grid md:grid-cols-2 gap-10 items-center">
                     <div className="relative">
                         <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 shadow-2xl">
                             <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1974&auto=format&fit=crop" alt="Equipe de engenharia em operação" className="h-[320px] md:h-[420px] w-full object-cover" />

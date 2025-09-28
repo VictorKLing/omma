@@ -104,7 +104,7 @@ const Section06: React.FC = () => {
                                     <div className="inline-block rounded-3xl border border-white/10 bg-white/5 p-2">
                                         <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop" alt="Equipe de construção" className="h-40 w-72 rounded-2xl object-cover md:h-48 md:w-96" />
                                     </div>
-                                    <div className="absolute -right-4 -top-4 h-10 w-10 rounded-lg bg-yellow-400/20 ring-1 ring-yellow-300/40"></div>
+                                    <div className="absolute right-2 md:-right-4 -top-4 h-10 w-10 rounded-lg bg-yellow-400/20 ring-1 ring-yellow-300/40"></div>
                                 </div>
                             </div>
                         </div>

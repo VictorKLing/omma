@@ -55,6 +55,25 @@ const Navbar: React.FC = () => {
                             </nav>
                         </div>
                         <div className="flex items-center gap-3">
+                            <label className="relative inline-block w-14 h-8">
+                                <input type="checkbox" defaultChecked  className="opacity-0 w-0 h-0 peer" />
+                                <span
+                                    className="
+                                    absolute cursor-pointer top-0 left-0 right-0 bottom-0
+                                    bg-zinc-100 rounded-full transition-all duration-300
+                                    peer-checked:bg-zinc-800
+                                    before:content-[''] before:absolute
+                                    before:h-6 before:w-6 before:rounded-full
+                                    before:left-1 before:top-1/2 before:-translate-y-1/2
+                                    before:bg-gradient-to-tr before:from-amber-400 before:to-amber-600
+                                    before:transition-all before:duration-300
+                                    peer-checked:before:left-[calc(100%-1.75rem)]
+                                    peer-checked:before:bg-zinc-800
+                                    peer-checked:before:bg-none
+                                    peer-checked:before:shadow-[inset_-3px_-2px_5px_-2px_#FFB900,inset_-10px_-4px_0_0_#FFB900]
+                                    "
+                                ></span>
+                            </label>
                             <Link href="../../contato" className="inline-flex items-center justify-center rounded-full border border-amber-400/90 px-5 py-2.5 text-sm text-amber-400 hover:bg-amber-400/10 transition outline-none ring-1 ring-inset ring-white/10 hover:ring-white/20 active:scale-[0.98]" style={{ fontFamily: 'DM Sans, Inter' }}>
                                 Contato
                             </Link>

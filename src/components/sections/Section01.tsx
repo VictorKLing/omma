@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 
 const Section01: React.FC = () => {
@@ -22,7 +23,8 @@ const Section01: React.FC = () => {
                             <br />
                             AMBIENTES
                             <br />
-                            <span className="text-white">EM RESULTADOS</span>
+                            <span className="text-white dark:text-red-800">EM RESULTADOS</span>
+                            <span className="text-black dark:text-red-800">Teste</span>
                         </h1>
 
                         {/* Paragraph */}

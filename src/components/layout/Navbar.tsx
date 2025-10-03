@@ -1,8 +1,8 @@
 "use client";
-import React from 'react';
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
+
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -16,6 +16,17 @@ const Navbar: React.FC = () => {
     const pathname = usePathname();
     const [menuOpen, setMenuOpen] = useState(false);
     if (pathname?.startsWith('/lp')) return null;
+    const [isDark, setIsDark] = useState(true);
+    useEffect(() => {
+        if (isDark) {
+            document.documentElement.classList.add("dark");
+        } else {
+            document.documentElement.classList.remove("dark");
+        }
+    }, [isDark]);
+
+    const toggleTheme = () => setIsDark(!isDark);
+
     return (
         <header className="">
             <div className="fixed top-4 inset-x-0 z-50 mx-auto max-w-7xl px-4 sm:px-6">
@@ -56,7 +67,12 @@ const Navbar: React.FC = () => {
                         </div>
                         <div className="flex items-center gap-3">
                             <label className="relative inline-block w-14 h-8">
-                                <input type="checkbox" defaultChecked  className="opacity-0 w-0 h-0 peer" />
+                                <input
+                                    type="checkbox"
+                                    checked={isDark}
+                                    onChange={toggleTheme}
+                                    className="opacity-0 w-0 h-0 peer"
+                                />
                                 <span
                                     className="
                                     absolute cursor-pointer top-0 left-0 right-0 bottom-0

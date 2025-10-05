@@ -29,7 +29,7 @@ const Section02: React.FC = () => {
                     {/* Right content */}
                     <div className="order-1 lg:order-2">
                         <h2 className="text-[28px] sm:text-[35px] font-bold tracking-tight leading-[1.25]" style={{ fontFamily: 'Exo, Inter', fontWeight: 700 }}>
-                            <span className="text-white">Gestão completa</span> para obras <span className="text-amber-400">rápidas</span> e eficientes
+                            <span >Gestão completa</span> para obras <span className="text-amber-400">rápidas</span> e eficientes
                         </h2>
 
                         <div className="mt-5">
@@ -47,7 +47,7 @@ const Section02: React.FC = () => {
                                     <div className="inline-flex h-6 w-6 items-center justify-center rounded-md bg-black/60 ring-1 ring-white/10">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 text-amber-400"><path d="M20 6 9 17l-5-5"></path></svg>
                                     </div>
-                                    <span className="text-[18px]" style={{ fontFamily: 'Exo, Inter', fontWeight: 600 }}>{text}</span>
+                                    <span className="text-[18px] text-white" style={{ fontFamily: 'Exo, Inter', fontWeight: 600 }}>{text}</span>
                                 </div>
                             ))}
                         </div>

@@ -1,7 +1,23 @@
 'use client';
 import React from 'react';
+import { sanityClient } from '../../lib/sanity';
+import { useState, useEffect } from 'react';
 
 const Section01: React.FC = () => {
+    const [subtitle, setSubtitle] = useState('');
+    useEffect(() => {
+  const fetchSubtitle = async () => {
+    try {
+      const query = `*[_type == "home"][0]{ subtitle }`;
+      const data = await sanityClient.fetch(query);
+      console.log('Dados do Sanity:', data); // veja no console
+      if (data?.subtitle) setSubtitle(data.subtitle);
+    } catch (error) {
+      console.error('Erro ao buscar subtitle:', error);
+    }
+  };
+  fetchSubtitle();
+}, []);
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background Image com Overlay */}
@@ -23,8 +39,7 @@ const Section01: React.FC = () => {
                             <br />
                             AMBIENTES
                             <br />
-                            <span className="text-white dark:text-red-800">EM RESULTADOS</span>
-                            <span className="text-black dark:text-red-800">Teste</span>
+                            <span className="text-[var(--text)]">EM RESULTADOS</span>
                         </h1>
 
                         {/* Paragraph */}
@@ -32,7 +47,7 @@ const Section01: React.FC = () => {
                             className="mt-6 text-lg sm:text-xl text-white/90 max-w-lg"
                             style={{ fontFamily: "'DM Sans', Inter", fontWeight: 500 }}
                         >
-                            Projetos de alto padrão que traduzem a identidade da sua empresa em cada detalhe.
+                            {subtitle || 'Carregando...'}
                         </p>
 
                         {/* CTA */}

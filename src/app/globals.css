@@ -8,3 +8,27 @@ html { scroll-behavior: smooth; }
 	background-color: rgba(255, 255, 255, 0.1);
 	color: #ffffff;
 }
+
+
+
+/*tema escuro*/
+:root{
+  --theme: #fff;      /* fundo escuro */
+  --surface: #0f1724;  /* superfície/card */
+  --primary: #60a5fa;  /* tom principal */
+  --text: #000;
+  --text2: #232323;    /* texto claro */
+  --muted: #9aa4b2;    /* texto secundário */
+}
+
+
+
+/*tema claro*/
+html.dark{
+  --theme: #000;       /* fundo claro */
+  --surface: #f8fafc;
+  --primary: #0b7285;
+  --text: #fff;
+  --text2: #B3B3B3;     /* texto escuro */
+  --muted: #6b7280;
+}

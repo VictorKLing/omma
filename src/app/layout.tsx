@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="pt-BR">
+        <html lang="pt-BR" className='dark'>
             <head>
                 {/* Google Fonts (match original) */}
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,13 +20,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     rel="stylesheet"
                 />
             </head>
-            <body className="antialiased min-h-screen text-white bg-black" style={{ fontFamily: 'Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Apple Color Emoji, Segoe UI Emoji' }}>
+            <body className="antialiased min-h-screen text-[var(--text)] bg-[var(--theme)]" style={{ fontFamily: 'Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Apple Color Emoji, Segoe UI Emoji' }}>
                 {/* Background ambiance */}
                 <div className="pointer-events-none fixed inset-0 -z-10">
                     <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1582588678413-dbf45f4823e9?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-30 saturate-0" />
                     <div className="absolute -top-[20%] -left-[10%] h-[40rem] w-[40rem] rounded-full bg-amber-400/20 blur-[160px]" />
                     <div className="absolute -bottom-[10%] -right-[10%] h-[36rem] w-[36rem] rounded-full bg-white/10 blur-[140px]" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-[var(--theme)] via-[rgba(0,0,0,0.8)] to-[var(--theme)]" />
                 </div>
 
                 <Navbar />

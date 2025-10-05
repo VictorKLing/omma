@@ -18,11 +18,11 @@ const Footer: React.FC = () => {
                         </div>
                         <span className="text-lg tracking-tight font-semibold">QMA Engenharia</span>
                     </div>
-                    <p className="mt-3 text-sm text-white/60">Excelência técnica para projetos que exigem eficiência, segurança e prazo.</p>
+                    <p className="mt-3 text-sm text-[var(--text2)]">Excelência técnica para projetos que exigem eficiência, segurança e prazo.</p>
                 </div>
                 <div>
                     <h5 className="text-sm tracking-tight font-semibold">Contato</h5>
-                    <ul className="mt-3 space-y-2 text-sm text-white/70">
+                    <ul className="mt-3 space-y-2 text-sm text-[var(--text2)]">
                         <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-yellow-400" /> contato@qma-eng.com</li>
                         <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-yellow-400" /> (11) 0000-0000</li>
                         <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-yellow-400" /> SP • RJ • MG</li>
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
                 </div>
             </div>
             <div className="border-t border-white/10">
-                <div className="mx-auto max-w-7xl px-4 py-6 text-xs text-white/50 flex flex-col sm:flex-row justify-between gap-3">
+                <div className="mx-auto max-w-7xl px-4 py-6 text-xs text-[var(--text2)] flex flex-col sm:flex-row justify-between gap-3">
                     <span>© <span>{year}</span> QMA Engenharia. Todos os direitos reservados.</span>
                     <span>Política de Privacidade • Termos de Uso</span>
                 </div>

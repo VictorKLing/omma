@@ -56,7 +56,7 @@ const Section02: React.FC = () => {
                             <div className="col-span-6 sm:col-span-8">
                                 <div className="aspect-[470/419] w-full overflow-hidden rounded-3xl ring-1 ring-white/10 bg-white/5">
                                     <img 
-                                        src={sectionImages.sectionImage1 ? urlFor(sectionImages.sectionImage1).url() : ''} 
+                                        src={sectionImages.sectionImage1 ? urlFor(sectionImages.sectionImage1).url() : 'null'} 
                                         alt="Imagem 1 da seção" 
                                         className="w-full h-full object-cover" 
                                     />
@@ -65,7 +65,7 @@ const Section02: React.FC = () => {
                             <div className="col-span-6 sm:col-span-4">
                                 <div className="aspect-[326/289] w-full overflow-hidden rounded-3xl ring-1 ring-white/10 bg-white/5">
                                     <img 
-                                        src={sectionImages.sectionImage2 ? urlFor(sectionImages.sectionImage2).url() : ''} 
+                                        src={sectionImages.sectionImage2 ? urlFor(sectionImages.sectionImage2).url() : 'null'} 
                                         alt="Imagem 2 da seção" 
                                         className="w-full h-full object-cover" 
                                     />
@@ -74,7 +74,7 @@ const Section02: React.FC = () => {
                             <div className="col-span-6 sm:col-span-5 sm:col-start-5">
                                 <div className="aspect-square w-full overflow-hidden rounded-3xl ring-1 ring-white/10 bg-white/5">
                                     <img 
-                                        src={sectionImages.sectionImage3 ? urlFor(sectionImages.sectionImage3).url() : ''} 
+                                        src={sectionImages.sectionImage3 ? urlFor(sectionImages.sectionImage3).url() : 'null'} 
                                         alt="Imagem 3 da seção" 
                                         className="w-full h-full object-cover" 
                                     />

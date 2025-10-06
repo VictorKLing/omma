@@ -13,12 +13,12 @@ html { scroll-behavior: smooth; }
 
 /*tema escuro*/
 :root{
-  --theme: #fff;      /* fundo escuro */
-  --surface: #0f1724;  /* superfície/card */
-  --primary: #60a5fa;  /* tom principal */
+  --theme: #fff;
+  --surface: #0f1724;
+  --primary: #60a5fa;
   --text: #000;
-  --text2: #232323;    /* texto claro */
-  --muted: #9aa4b2;    /* texto secundário */
+  --text2: #232323;
+  --muted: #9aa4b2;
 }
 
 
@@ -32,3 +32,26 @@ html.dark{
   --text2: #B3B3B3;     /* texto escuro */
   --muted: #6b7280;
 }
+/* Alvo o contêiner da paginação */
+.swiper-pagination {
+  bottom: 0px !important;
+}
+
+/* Bolinhas padrão */
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 0, 0.5) !important;
+  opacity: 1;
+  margin: 0 4px;
+  transition: transform 0.3s, background-color 0.3s;
+  border-radius: 999px !important;
+}
+
+/* Bolinha ativa */
+.swiper-pagination-bullet-active {
+  background-color: #FFD700 !important;
+  width: 30px !important;
+}
+
+

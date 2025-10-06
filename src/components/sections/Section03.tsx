@@ -1,6 +1,47 @@
-import React from 'react';
+'use client';
+import React, { useEffect, useState } from 'react';
+import { sanityClient } from '../../lib/sanity';
+
+interface Project {
+  title: string;
+  category: string;
+  description: string;
+  buttonHref?: string;
+}
 
 const Section03: React.FC = () => {
+    const [projects, setProjects] = useState<Project[]>([]);
+    const [stats, setStats] = useState<{ number: string; label: string }[]>([]);
+
+    useEffect(() => {
+        const fetchProjects = async () => {
+            try {
+            const query = `*[_type == "home"][0]{
+                projetos {
+                projects[] {
+                    title,
+                    category,
+                    description,
+                    banner,
+                    href
+                },
+                stats[] {
+                    number,
+                    label
+                }
+                }
+            }`;
+            const data = await sanityClient.fetch(query);
+            setProjects(data.projetos?.projects || []);
+            setStats(data.projetos?.stats || []);
+            } catch (error) {
+            console.error('Erro ao buscar projetos:', error);
+            }
+        };
+
+        fetchProjects();
+    }, []);
+
     return (
         <section className="px-4 py-16">
             <h3 className="text-center text-[28px] sm:text-[35px] font-bold tracking-tight" style={{ fontFamily: 'Exo, Inter' }}>
@@ -101,18 +142,14 @@ const Section03: React.FC = () => {
             {/* Company Stats */}
             <div className="mt-16 text-center">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                    <div className="flex flex-col items-center">
-                        <div className="text-4xl font-bold text-amber-400" style={{ fontFamily: 'Exo, Inter' }}>25+</div>
-                        <div className="text-zinc-400 mt-2">Anos de Experiência</div>
+                    {stats.map((stat, i) => (
+                    <div key={i} className="flex flex-col items-center">
+                        <div className="text-4xl font-bold text-amber-400" style={{ fontFamily: 'Exo, Inter' }}>
+                        {stat.number}
+                        </div>
+                        <div className="text-zinc-400 mt-2">{stat.label}</div>
                     </div>
-                    <div className="flex flex-col items-center">
-                        <div className="text-4xl font-bold text-amber-400" style={{ fontFamily: 'Exo, Inter' }}>1000+</div>
-                        <div className="text-zinc-400 mt-2">Obras Entregues</div>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <div className="text-4xl font-bold text-amber-400" style={{ fontFamily: 'Exo, Inter' }}>100%</div>
-                        <div className="text-zinc-400 mt-2">Clientes Satisfeitos</div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </section>

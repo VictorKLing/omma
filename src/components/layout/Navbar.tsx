@@ -1,8 +1,7 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from 'next/navigation';
+import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
-
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -13,19 +12,21 @@ const navLinks = [
 ];
 
 const Navbar: React.FC = () => {
-    const pathname = usePathname();
-    const [menuOpen, setMenuOpen] = useState(false);
-    if (pathname?.startsWith('/lp')) return null;
-    const [isDark, setIsDark] = useState(true);
-    useEffect(() => {
-        if (isDark) {
-            document.documentElement.classList.add("dark");
-        } else {
-            document.documentElement.classList.remove("dark");
-        }
-    }, [isDark]);
+  const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [isDark, setIsDark] = useState(true);
 
-    const toggleTheme = () => setIsDark(!isDark);
+  useEffect(() => {
+    if (isDark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [isDark]);
+
+  const toggleTheme = () => setIsDark(!isDark);
+
+  if (pathname?.startsWith("/lp")) return null;
 
     return (
         <header className="">

@@ -1,6 +1,4 @@
 import React from 'react';
-import Form from '../../components/lp/LeadForm'
-
 
 const Section06: React.FC = () => {
     return (

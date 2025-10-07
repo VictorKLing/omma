@@ -2,12 +2,12 @@
 import React, { useEffect, useState } from 'react';
 import { sanityClient } from '../../lib/sanity';
 
-interface CtaData {
-  title: string;
-  subtitle: string;
-  button1Text: string;
-  button2Text: string;
-}
+// interface CtaData {
+//   title: string;
+//   subtitle: string;
+//   button1Text: string;
+//   button2Text: string;
+// }
 
 const Section06: React.FC = () => {
       const [cta, setCta] = useState<{
@@ -31,7 +31,7 @@ useEffect(() => {
       const data = await sanityClient.fetch(query);
       setCta(data.section06?.cta || null);
     } catch (error) {
-      console.error('Erro ao buscar CTA:', error);
+      console.error('Erro ao buscar:', error);
     }
   };
 

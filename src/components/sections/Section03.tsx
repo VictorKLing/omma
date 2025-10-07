@@ -2,15 +2,15 @@
 import React, { useEffect, useState } from 'react';
 import { sanityClient } from '../../lib/sanity';
 
-interface Project {
-  title: string;
-  category: string;
-  description: string;
-  buttonHref?: string;
-}
+// interface Project {
+//   title: string;
+//   category: string;
+//   description: string;
+//   buttonHref?: string;
+// }
 
 const Section03: React.FC = () => {
-    const [projects, setProjects] = useState<Project[]>([]);
+    // const [projects, setProjects] = useState<Project[]>([]);
     const [stats, setStats] = useState<{ number: string; label: string }[]>([]);
 
     useEffect(() => {
@@ -32,7 +32,7 @@ const Section03: React.FC = () => {
                 }
             }`;
             const data = await sanityClient.fetch(query);
-            setProjects(data.projetos?.projects || []);
+            // setProjects(data.projetos?.projects || []);
             setStats(data.projetos?.stats || []);
             } catch (error) {
             console.error('Erro ao buscar projetos:', error);

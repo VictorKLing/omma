@@ -147,7 +147,7 @@ const Section03: React.FC = () => {
                         <div className="text-4xl font-bold text-amber-400" style={{ fontFamily: 'Exo, Inter' }}>
                         {stat.number}
                         </div>
-                        <div className="text-zinc-400 mt-2">{stat.label}</div>
+                        <div className="text-[var(--text)] mt-2">{stat.label}</div>
                     </div>
                     ))}
                 </div>

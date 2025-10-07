@@ -9,10 +9,10 @@ const Section05 = async () => {
     <section className="relative py-12 md:py-20">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <h3 className="text-[24px] md:text-[32px] font-semibold tracking-tight text-white">
+          <h3 className="text-[24px] md:text-[32px] font-semibold tracking-tight text-[var(--primary)]">
             {metodologia?.title || "METODOLOGIA OMMA"}
           </h3>
-          <p className="mt-2 text-sm md:text-base text-neutral-400">
+          <p className="mt-2 text-sm md:text-base text-[var(--text)]/90">
             {metodologia?.subtitle || "O caminho para o sucesso do seu projeto"}
           </p>
         </div>

@@ -36,15 +36,12 @@ export default function WorkWithUsForm() {
 
   return (
     <section id="contato" className="relative pt-[120px] md:pt-[184px]">
-        <div className="absolute inset-0">
-            <img src="https://images.unsplash.com/photo-1517420704952-d9f39e95b43f?q=80&w=2070&auto=format&fit=crop" alt="Canteiro de obras" className="h-full w-full object-cover opacity-40" />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/60 to-[#0b0b0f]"></div>
-        </div>
+        
 
         <div className="relative mx-auto max-w-6xl px-4 pb-16 md:pb-24">
            <div className="rounded-3xl border border-white/5 bg-white/[0.02] p-6 md:p-8">
-                <h1 className="text-[26px] md:text-[32px] font-semibold tracking-tight text-white">Trabalhe conosco</h1>
-                <p className="mt-4 text-[15px] leading-7 text-neutral-300">Somos uma equipe apaixonada por construir, inovar e superar desafios, transformando visões em realidade com excelência e agilidade. Se você busca um ambiente dinâmico, colaborativo e com oportunidades de crescimento, seu lugar é aqui!</p>
+                <h1 className="text-[26px] md:text-[32px] font-semibold tracking-tight text-[var(--text)]">Trabalhe conosco</h1>
+                <p className="mt-4 text-[15px] leading-7 text-[var(--text)]">Somos uma equipe apaixonada por construir, inovar e superar desafios, transformando visões em realidade com excelência e agilidade. Se você busca um ambiente dinâmico, colaborativo e com oportunidades de crescimento, seu lugar é aqui!</p>
                 <div className="mt-6">
                     <button className="inline-flex items-center gap-2 rounded-full border border-yellow-400/60 bg-yellow-400/10 px-5 py-3 text-sm font-medium text-yellow-300 hover:bg-yellow-400/15 hover:border-yellow-400 transition">Preencha o formulário e envie seu currículo</button>
                 </div>
@@ -69,7 +66,7 @@ export default function WorkWithUsForm() {
                     </div>
                     <div className="md:col-span-2 flex items-center justify-between gap-3">
                         <div className="text-xs text-white/60">Seus dados estão protegidos e não serão compartilhados.</div>
-                        <button type="submit" disabled={loading} className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium tracking-tight bg-gradient-to-r from-amber-500/20 to-amber-500/20 border border-amber-500/40 hover:from-amber-500/30 hover:to-amber-500/30 transition-colors disabled:opacity-60">
+                        <button type="submit" disabled={loading} className="text-white inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium tracking-tight bg-gradient-to-r from-amber-500/20 to-amber-500/20 border border-amber-500/40 hover:from-amber-500/30 hover:to-amber-500/30 transition-colors disabled:opacity-60">
                         {loading ? 'Enviando...' : 'Enviar Mensagem'}
                         </button>
                     </div>

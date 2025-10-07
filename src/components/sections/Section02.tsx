@@ -90,8 +90,8 @@ const Section02 = async () => {
 
           {/* Right content */}
           <div className="order-1 lg:order-2">
-            <h2 className="text-[28px] sm:text-[35px] font-bold tracking-tight leading-[1.25]" style={{ fontFamily: 'Exo, Inter', fontWeight: 700 }}>
-              <span>Gestão completa</span> para obras <span className="text-amber-400">rápidas</span> e eficientes
+            <h2 className="text-[var(--text)] text-[28px] sm:text-[35px] font-bold tracking-tight leading-[1.25]" style={{ fontFamily: 'Exo, Inter', fontWeight: 700 }}>
+              Gestão completa para obras rápidas e eficientes
             </h2>
 
             <div className="mt-5">
@@ -120,7 +120,7 @@ const Section02 = async () => {
                       <path d="M20 6 9 17l-5-5"></path>
                     </svg>
                   </div>
-                  <span className="text-[18px] text-white" style={{ fontFamily: 'Exo, Inter', fontWeight: 600 }}>{item.title}</span>
+                  <span className="text-[18px] text-[var(--text)]" style={{ fontFamily: 'Exo, Inter', fontWeight: 600 }}>{item.title}</span>
                 </div>
               ))}
             </div>
@@ -129,7 +129,7 @@ const Section02 = async () => {
               <div className="mt-8">
                 <a
                   href={button.href}
-                  className="inline-flex items-center gap-2 rounded-full border border-amber-400/90 px-9 py-4 text-[15px] text-white hover:bg-amber-400/10 transition shadow-[0_4px_10px_rgba(20,20,42,0.08)] ring-1 ring-inset ring-white/10 hover:ring-white/20"
+                  className="inline-flex items-center gap-2 rounded-full border border-amber-400/90 px-9 py-4 text-[15px] text-[var(--text)] hover:bg-amber-400/10 transition shadow-[0_4px_10px_rgba(20,20,42,0.08)] ring-1 ring-inset ring-white/10 hover:ring-white/20"
                   style={{ fontFamily: 'DM Sans, Inter' }}
                 >
                   {button.text || "FAÇA SEU PROJETO COM A OMMA!"}

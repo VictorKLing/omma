@@ -28,7 +28,7 @@ const Section04: React.FC = () => {
     return (
         <section className="relative py-10 md:py-16">
             <div className="mx-auto max-w-6xl px-6">
-                <h2 className="mb-8 text-center text-[22px] md:text-[26px] font-semibold tracking-tight text-yellow-300">
+                <h2 className="mb-8 text-center text-[22px] md:text-[26px] font-semibold tracking-tight text-yellow-400">
                     {title || "Nossos clientes"}
                 </h2>
 

@@ -81,14 +81,14 @@ useEffect(() => {
 
                     <div className="relative">
                         <h2 className="text-2xl md:text-3xl lg:text-4xl tracking-tight font-semibold text-yellow-400">QUEM SOMOS?</h2>
-                        <p className="mt-4 text-base md:text-lg text-white/80">Soluções completas para ambientes de alto padrão.</p>
-                        <p className="mt-4 text-sm md:text-base text-white/70">A QMA Engenharia cuida de toda a gestão da sua obra, do planejamento à chave na mão, garantindo que cada etapa seja executada com precisão técnica e rigor. Nossa metodologia comprovada nos permite entregar cada projeto com agilidade, evitando custos extras com aluguel de espaços provisórios ou interrupções nas suas operações.</p>
-                        <p className="mt-4 text-sm md:text-base text-white/70">Transparência, previsibilidade e segurança fazem parte do nosso compromisso. É mais do que entregar um projeto: é construir valor, criando espaços sofisticados que refletem a essência da sua marca e fortalecem sua presença no mercado.</p>
+                        <p className="mt-4 text-base md:text-lg text-[var(--text)]/80">Soluções completas para ambientes de alto padrão.</p>
+                        <p className="mt-4 text-sm md:text-base text-[var(--text)]/70">A QMA Engenharia cuida de toda a gestão da sua obra, do planejamento à chave na mão, garantindo que cada etapa seja executada com precisão técnica e rigor. Nossa metodologia comprovada nos permite entregar cada projeto com agilidade, evitando custos extras com aluguel de espaços provisórios ou interrupções nas suas operações.</p>
+                        <p className="mt-4 text-sm md:text-base text-[var(--text)]/70">Transparência, previsibilidade e segurança fazem parte do nosso compromisso. É mais do que entregar um projeto: é construir valor, criando espaços sofisticados que refletem a essência da sua marca e fortalecem sua presença no mercado.</p>
                         <div className="mt-8 flex items-center gap-3">
-                            <a href="#contato" className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium tracking-tight bg-gradient-to-r from-yellow-500/20 to-amber-500/20 border border-yellow-500/40 hover:from-yellow-500/30 hover:to-amber-500/30 transition-colors">
+                            <a href="#contato" className="inline-flex items-center gap-2 rounded-full border border-yellow-400/60 bg-yellow-400/10 px-6 py-3 text-sm font-medium text-yellow-300 hover:bg-yellow-400/15 hover:border-yellow-400 transition">
                                 <span>Solicite um orçamento agora</span>
                             </a>
-                            <div className="hidden sm:flex items-center gap-2 text-white/60 text-sm">
+                            <div className="hidden sm:flex items-center gap-2 text-[var(--text)]/60 text-sm">
                                 <span>Compromisso com prazos e segurança</span>
                             </div>
                         </div>
@@ -123,9 +123,9 @@ useEffect(() => {
                 <div className="mx-auto max-w-6xl px-6">
                     <div className="grid items-center gap-10 md:grid-cols-2">
                         <div className="rounded-3xl border border-white/5 bg-white/[0.02] p-6 md:p-8">
-                            <h3 className="text-[26px] md:text-[32px] font-semibold tracking-tight text-white">Seja um <span className="text-yellow-300">arquiteto</span> parceiro da <span className="text-white">OMMA</span></h3>
-                            <p className="mt-4 text-[15px] leading-7 text-neutral-300">A OMMA Engenharia cuida de toda a gestão da sua obra, do planejamento à obra, garantindo que cada etapa seja executada com precisão técnica e rigor. Nossa metodologia comprova nosso empenho em entregar cada projeto com qualidade, evitando custos extras com alinhamento, escopo previsível e transparência nas operações.</p>
-                            <p className="mt-4 text-[15px] leading-7 text-neutral-300">Transparência, previsibilidade e segurança fazem parte do nosso compromisso. E mais do que entregar ambientes funcionais, criamos espaços que refletem as essências de sua marca e fortalecem seu posicionamento no mercado.</p>
+                            <h3 className="text-[26px] md:text-[32px] font-semibold tracking-tight text-yellow-400">Seja um arquiteto parceiro da OMMA</h3>
+                            <p className="mt-4 text-[15px] leading-7 text-[var(--text)]-300">A OMMA Engenharia cuida de toda a gestão da sua obra, do planejamento à obra, garantindo que cada etapa seja executada com precisão técnica e rigor. Nossa metodologia comprova nosso empenho em entregar cada projeto com qualidade, evitando custos extras com alinhamento, escopo previsível e transparência nas operações.</p>
+                            <p className="mt-4 text-[15px] leading-7 text-[var(--text)]-300">Transparência, previsibilidade e segurança fazem parte do nosso compromisso. E mais do que entregar ambientes funcionais, criamos espaços que refletem as essências de sua marca e fortalecem seu posicionamento no mercado.</p>
 
                             <div className="mt-6">
                                 <button className="inline-flex items-center gap-2 rounded-full border border-yellow-400/60 bg-yellow-400/10 px-5 py-3 text-sm font-medium text-yellow-300 hover:bg-yellow-400/15 hover:border-yellow-400 transition">SEJA UM ARQUITETO PARCEIRO AGORA!</button>
@@ -153,12 +153,12 @@ useEffect(() => {
             {/* Contato */}
             <section id="contato" className="relative">
                 <div className="absolute inset-0">
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/60 to-[#0b0b0f]"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-[var(--theme)]/60 via-[var(--theme)]/60 to-[var(--theme)]"></div>
                 </div>
 
                 <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-24">
                     <div className="rounded-2xl border border-white/10 bg-black/50 backdrop-blur px-4 sm:px-8 py-8 md:py-10 shadow-2xl">
-                        <h3 className="text-xl md:text-2xl lg:text-3xl tracking-tight font-semibold">Descubra como garantir a excelência do seu próximo investimento em infraestrutura!</h3>
+                        <h3 className="text-xl md:text-2xl lg:text-3xl tracking-tight font-semibold text-white">Descubra como garantir a excelência do seu próximo investimento em infraestrutura!</h3>
 
                         <form className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="relative">
@@ -181,7 +181,7 @@ useEffect(() => {
                                     <span>Seus dados estão protegidos e não serão compartilhados.</span>
                                 </div>
                                 <button type="submit" className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium tracking-tight bg-gradient-to-r from-yellow-500/20 to-amber-500/20 border border-yellow-500/40 hover:from-yellow-500/30 hover:to-amber-500/30 transition-colors">
-                                    <span>Enviar Mensagem</span>
+                                    <span className='text-white'>Enviar Mensagem</span>
                                 </button>
                             </div>
                         </form>

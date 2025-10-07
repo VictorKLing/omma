@@ -11,8 +11,8 @@ const Timeline: React.FC = () => {
     return (
         <div className="mx-auto max-w-6xl px-6">
             <div className="mx-auto max-w-3xl text-center">
-                <h3 className="text-[24px] md:text-[32px] font-semibold tracking-tight text-white">METODOLOGIA OMMA</h3>
-                <p className="mt-2 text-sm md:text-base text-neutral-400">O caminho para o sucesso do seu projeto</p>
+                <h3 className="text-[24px] md:text-[32px] font-semibold tracking-tight text-yellow-400">METODOLOGIA OMMA</h3>
+                <p className="mt-2 text-sm md:text-base text-[var(--text)]">O caminho para o sucesso do seu projeto</p>
             </div>
 
             <div className="relative mt-10 md:mt-14">

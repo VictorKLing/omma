@@ -28,18 +28,18 @@ const Metodologia = () => {
 
                     {/* Right content */}
                     <div className="order-1 lg:order-2">
-                        <h2 className="text-[28px] sm:text-[35px] font-bold tracking-tight leading-[1.25]" style={{ fontFamily: 'Exo, Inter', fontWeight: 700 }}>
-                            <span className="text-white">Obras ágeis do</span> <span className="text-amber-400">planejamento </span> à entrega
+                        <h2 className="text-yellow-400 text-[28px] sm:text-[35px] font-bold tracking-tight leading-[1.25]" style={{ fontFamily: 'Exo, Inter', fontWeight: 700 }}>
+                            Obras ágeis doplanejamento à entrega
                         </h2>
 
                         <div className="mt-5">
-                            <p className="text-[17px] sm:text-[18px] leading-7 text-white/90" style={{ fontFamily: 'Exo, Inter', fontWeight: 400 }}>
+                            <p className="text-[17px] sm:text-[18px] leading-7 text-[var(--text)]/90" style={{ fontFamily: 'Exo, Inter', fontWeight: 400 }}>
                                 Na OMMA, somos reconhecidos por nossa metodologia de execução acelerada e eficiente. Isso não é apenas sobre velocidade, mas sobre a otimização rigorosa de cronogramas, recursos e fluxos de trabalho, garantindo a entrega do seu projeto dentro do prazo e do orçamento, sem comprometer a qualidade ou a segurança.
                             </p>
-                            <p className="mt-4 text-[17px] sm:text-[18px] leading-7 text-white/90" style={{ fontFamily: 'Exo, Inter', fontWeight: 400 }}>
+                            <p className="mt-4 text-[17px] sm:text-[18px] leading-7 text-[var(--text)]/90" style={{ fontFamily: 'Exo, Inter', fontWeight: 400 }}>
                                 Nosso foco inabalável é entregar ambientes de alta qualidade e performance construtiva, garantindo durabilidade, funcionalidade, estética, conformidade rigorosa ao seu projeto arquitetônico e às normas técnicas mais exigentes.
                             </p>
-                            <p className="mt-4 text-[17px] sm:text-[18px] leading-7 text-white/90" style={{ fontFamily: 'Exo, Inter', fontWeight: 400 }}>
+                            <p className="mt-4 text-[17px] sm:text-[18px] leading-7 text-[var(--text)]/90" style={{ fontFamily: 'Exo, Inter', fontWeight: 400 }}>
                                 Com a OMMA, você capitaliza mais rapidamente nas vantagens operacionais e estratégicas do seu novo espaço – seja para expandir suas operações, aumentar a produtividade da sua equipe, aprimorar a experiência dos seus clientes ou fortalecer a imagem da sua marca. Isso permite que você e sua equipe foquem integralmente no crescimento e na inovação do seu core business, enquanto nós cuidamos da infraestrutura.
                             </p>
                         </div>

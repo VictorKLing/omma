@@ -28,7 +28,7 @@ const Section01 = async () => {
       {/* Background Image com Overlay */}
       <div className="absolute inset-0 z-0 top-0">
         <div className="absolute inset-0 top-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=2560&q=80')] bg-cover bg-center bg-no-repeat" />
-        <div className="absolute inset-0 bg-black/60 bg-theme" />
+        <div className="absolute inset-0 bg-theme" />
       </div>
 
       {/* Content Container */}
@@ -37,7 +37,7 @@ const Section01 = async () => {
           <div className="flex flex-col justify-center">
             {/* Heading */}
             <h1
-              className="text-4xl sm:text-5xl lg:text-6xl leading-tight font-semibold tracking-tight"
+              className="text-4xl sm:text-5xl lg:text-6xl leading-tight font-bold tracking-tight"
               style={{ fontFamily: "'DM Sans', Inter", fontStyle: 'italic', fontWeight: 600 }}
             >
               <span className="text-amber-400">TRANSFORMANDO</span>
@@ -49,7 +49,7 @@ const Section01 = async () => {
 
             {/* Paragraph */}
             <p
-              className="mt-6 text-lg sm:text-xl text-white/90 max-w-lg"
+              className="mt-6 text-lg sm:text-xl text-[var(--text)]/90 max-w-lg"
               style={{ fontFamily: "'DM Sans', Inter", fontWeight: 500 }}
             >
               {subtitle}

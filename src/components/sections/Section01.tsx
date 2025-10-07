@@ -28,7 +28,7 @@ const Section01 = async () => {
       {/* Background Image com Overlay */}
       <div className="absolute inset-0 z-0 top-0">
         <div className="absolute inset-0 top-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=2560&q=80')] bg-cover bg-center bg-no-repeat" />
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/60 bg-theme" />
       </div>
 
       {/* Content Container */}

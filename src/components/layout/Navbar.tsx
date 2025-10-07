@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
     return (
         <header className="">
             <div className="fixed top-4 inset-x-0 z-50 mx-auto max-w-7xl px-4 sm:px-6">
-                <div className="rounded-2xl bg-white/5 backdrop-blur-xl ring-1 ring-white/10 shadow-xl">
+                <div className="rounded-2xl bg-[var(--theme)]/5 backdrop-blur-xl ring-1 ring-[var(--theme)]/10 shadow-xl">
                     <div className="flex items-center justify-between px-4 py-3 sm:px-6">
                         <div className="flex items-center gap-3">
                             <Link href="/" className="inline-flex items-center gap-2">

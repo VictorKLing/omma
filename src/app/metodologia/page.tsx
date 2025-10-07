@@ -2,8 +2,8 @@ import Timeline from '../../components/shared/Timeline'
 
 const Metodologia = () => {
     return (
-        <section id="contato" className="relative md:pt-[114px]">
-            <div className='sm:px-6 sm:py-24 max-w-7xl mr-auto ml-auto pt-16 pr-4 pb-16 pl-4'>
+        <section id="contato" className="relative pt-[146px] md:pt-[184px]">
+            <div className='sm:px-6 sm:pb-24 max-w-7xl mr-auto ml-auto pr-4 pb-16 pl-4'>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
                     {/* Left images */}
                     <div className="order-2 lg:order-1">

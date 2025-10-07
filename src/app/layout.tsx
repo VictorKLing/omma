@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1582588678413-dbf45f4823e9?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-30 saturate-0" />
                     <div className="absolute -top-[20%] -left-[10%] h-[40rem] w-[40rem] rounded-full bg-amber-400/20 blur-[160px]" />
                     <div className="absolute -bottom-[10%] -right-[10%] h-[36rem] w-[36rem] rounded-full bg-white/10 blur-[140px]" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-[var(--theme)] via-[rgba(0,0,0,0.8)] to-[var(--theme)]" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-[var(--theme)] via-[rgba(66,66,66,0.7)] to-[var(--theme)]" />
                 </div>
 
                 <Navbar />

@@ -32,6 +32,15 @@ html.dark{
   --text2: #B3B3B3;     /* texto escuro */
   --muted: #6b7280;
 }
+
+html.dark .bg-theme{
+  background-color: color-mix(in oklab, var(--color-black) /* #000 = #000000 */ 60%, transparent);
+}
+
+html .bg-theme{
+  background-color: color-mix(in oklab, var(--color-white) /* #000 = #000000 */ 60%, transparent);
+}
+
 /* Alvo o contêiner da paginação */
 .swiper-pagination {
   bottom: -10px !important;

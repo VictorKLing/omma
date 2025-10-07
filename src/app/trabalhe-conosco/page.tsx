@@ -35,13 +35,13 @@ export default function WorkWithUsForm() {
   }
 
   return (
-    <section id="contato" className="relative md:pt-[114px]">
+    <section id="contato" className="relative pt-[120px] md:pt-[184px]">
         <div className="absolute inset-0">
             <img src="https://images.unsplash.com/photo-1517420704952-d9f39e95b43f?q=80&w=2070&auto=format&fit=crop" alt="Canteiro de obras" className="h-full w-full object-cover opacity-40" />
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/60 to-[#0b0b0f]"></div>
         </div>
 
-        <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-24">
+        <div className="relative mx-auto max-w-6xl px-4 pb-16 md:pb-24">
            <div className="rounded-3xl border border-white/5 bg-white/[0.02] p-6 md:p-8">
                 <h1 className="text-[26px] md:text-[32px] font-semibold tracking-tight text-white">Trabalhe conosco</h1>
                 <p className="mt-4 text-[15px] leading-7 text-neutral-300">Somos uma equipe apaixonada por construir, inovar e superar desafios, transformando visões em realidade com excelência e agilidade. Se você busca um ambiente dinâmico, colaborativo e com oportunidades de crescimento, seu lugar é aqui!</p>

@@ -34,7 +34,7 @@ html.dark{
 }
 /* Alvo o contêiner da paginação */
 .swiper-pagination {
-  bottom: 0px !important;
+  bottom: -10px !important;
 }
 
 /* Bolinhas padrão */

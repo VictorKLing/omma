@@ -1,6 +1,42 @@
-import React from 'react';
+'use client';
+import React, { useEffect, useState } from 'react';
+import { sanityClient } from '../../lib/sanity';
+
+interface CtaData {
+  title: string;
+  subtitle: string;
+  button1Text: string;
+  button2Text: string;
+}
 
 const Section06: React.FC = () => {
+      const [cta, setCta] = useState<{
+  title: string;
+  subtitle: string;
+  buttons: { text: string; href: string }[];
+} | null>(null);
+
+useEffect(() => {
+  const fetchCta = async () => {
+    try {
+      const query = `*[_type == "home"][0]{
+        section06 {
+          cta {
+            title,
+            subtitle,
+            buttons[]{ text, href }
+          }
+        }
+      }`;
+      const data = await sanityClient.fetch(query);
+      setCta(data.section06?.cta || null);
+    } catch (error) {
+      console.error('Erro ao buscar CTA:', error);
+    }
+  };
+
+  fetchCta();
+}, []);
     return (
         <>
             {/* Minimal CTA strip */}
@@ -8,16 +44,20 @@ const Section06: React.FC = () => {
                 <div className="mx-auto max-w-6xl px-6">
                     <div className="flex flex-col items-center justify-between gap-4 rounded-2xl border border-white/5 bg-gradient-to-br from-white/[0.03] to-white/[0.01] p-6 md:flex-row md:p-8">
                         <div>
-                            <h4 className="text-[20px] md:text-[22px] font-semibold tracking-tight text-white">Pronto para acelerar seu projeto?</h4>
-                            <p className="mt-1 text-sm text-neutral-400">Fale com nosso time e receba um planejamento personalizado.</p>
+                            <h4 className="text-[20px] md:text-[22px] font-semibold tracking-tight text-white">
+                                {cta?.title || 'Pronto para acelerar seu projeto?'}
+                            </h4>
+                            <p className="mt-1 text-sm text-neutral-400">
+                                {cta?.subtitle || 'Fale com nosso time e receba um planejamento personalizado.'}
+                            </p>
                         </div>
                         <div className="flex items-center gap-3">
-                            <button className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-medium text-white hover:bg-white/10 transition">
-                                Entrar em contato
-                            </button>
-                            <button className="inline-flex items-center gap-2 rounded-full border border-yellow-400/60 bg-yellow-400/10 px-4 py-2.5 text-sm font-medium text-yellow-300 hover:bg-yellow-400/15 hover:border-yellow-400 transition">
-                                Agendar reunião
-                            </button>
+                            <a href={cta?.buttons?.[0]?.href || '#'} className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-medium text-white hover:bg-white/10 transition">
+                                {cta?.buttons?.[0]?.text || 'Entrar em contato'}
+                            </a>
+                            <a href={cta?.buttons?.[1]?.href || '#'} className="inline-flex items-center gap-2 rounded-full border border-yellow-400/60 bg-yellow-400/10 px-4 py-2.5 text-sm font-medium text-yellow-300 hover:bg-yellow-400/15 hover:border-yellow-400 transition">
+                                {cta?.buttons?.[1]?.text || 'Agendar reunião'}
+                            </a>
                         </div>
                     </div>
                 </div>

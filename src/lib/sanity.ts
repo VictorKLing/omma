@@ -1,5 +1,5 @@
 import { createClient } from '@sanity/client';
-import imageUrlBuilder from '@sanity/image-url'; // importa o builder correto
+import imageUrlBuilder from '@sanity/image-url';
 
 export const sanityClient = createClient({
   projectId: 'ingfzbed',
@@ -8,10 +8,8 @@ export const sanityClient = createClient({
   useCdn: false,
 });
 
-// cria o builder de imagens
 const builder = imageUrlBuilder(sanityClient);
 
-// função que gera URL da imagem
 export function urlFor(source: any) {
   return builder.image(source);
 }
@@ -25,7 +23,7 @@ export async function getHomeData() {
     section1 {
       sectionTitle,
       section1Text,
-      items[]{
+      items[] {
         icon,
         title,
         description
@@ -37,8 +35,73 @@ export async function getHomeData() {
         text,
         href
       }
+    },
+    clientes {
+      title,
+      brands[]
+    },
+    metodologia {
+      title,
+      subtitle,
+      cards[]{ title, description, svg },
+      button { text, href }
+    },
+    // Novos campos para Section06
+    section06 {
+      cta {
+        title,
+        subtitle,
+        button1Text,
+        button2Text
+      },
+      sobre {
+        title,
+        subtitle,
+        text1,
+        text2,
+        buttonText,
+        buttonHref,
+        imageMain,
+        imageMainAlt,
+        imageSecondary,
+        imageSecondaryAlt,
+        disclaimer
+      },
+      depoimento {
+        text,
+        image,
+        imageAlt,
+        location,
+        deliveryTime
+      },
+      parceria {
+        titlePart1,
+        highlight,
+        titlePart2,
+        text1,
+        text2,
+        buttonText,
+        imageMain,
+        imageMainAlt,
+        imageSecondary,
+        imageSecondaryAlt
+      },
+      contato {
+        title,
+        backgroundImage,
+        placeholders {
+          name,
+          phone,
+          email,
+          service,
+          project
+        },
+        disclaimer,
+        buttonText
+      }
     }
   }`;
+
   const data = await sanityClient.fetch(query);
   return data;
 }

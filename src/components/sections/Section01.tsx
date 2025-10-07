@@ -1,30 +1,27 @@
-'use client';
-import React, { useState, useEffect } from 'react';
 import { sanityClient } from '../../lib/sanity';
 
-const Section01: React.FC = () => {
-  const [subtitle, setSubtitle] = useState('');
-  const [button, setButton] = useState<{ text: string; href: string } | null>(null);
+interface Button {
+  text: string;
+  href: string;
+}
 
-  useEffect(() => {
-    const fetchSubtitle = async () => {
-      try {
-        const query = `*[_type == "home"][0]{
-          subtitle,
-          button {
-            text,
-            href
-          }
-        }`;
-        const data = await sanityClient.fetch(query);
-        if (data?.subtitle) setSubtitle(data.subtitle);
-        if (data?.button) setButton(data.button);
-      } catch (error) {
-        console.error('Erro ao buscar dados:', error);
-      }
-    };
-    fetchSubtitle();
-  }, []);
+async function getHomeData(): Promise<{ subtitle: string; button: Button | null }> {
+  const query = `*[_type == "home"][0]{
+    subtitle,
+    button {
+      text,
+      href
+    }
+  }`;
+  const data = await sanityClient.fetch(query);
+  return {
+    subtitle: data?.subtitle || '',
+    button: data?.button || null
+  };
+}
+
+const Section01 = async () => {
+  const { subtitle, button } = await getHomeData();
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">

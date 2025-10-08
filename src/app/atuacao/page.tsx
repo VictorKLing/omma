@@ -84,7 +84,7 @@ export default function SwiperExpertise() {
             ))
           ) : (
             <SwiperSlide>
-              <div className="bg-white/10 p-6 rounded-xl text-center">Nenhuma imagem</div>
+              <div className="bg-white/10 p-6 rounded-xl text-center"></div>
             </SwiperSlide>
           )}
           <div className="custom-pagination mt-6 flex items-center justify-center gap-2"></div>
@@ -105,7 +105,7 @@ export default function SwiperExpertise() {
               </div>
             ))
           ) : (
-            <p className="text-center text-white/70">Nenhum card disponível</p>
+            <p className="text-center text-white/70"></p>
           )}
         </div>
       </div>

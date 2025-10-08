@@ -88,7 +88,7 @@ const Navbar: React.FC = () => {
               </nav>
             </div>
             <div className="flex items-center gap-3">
-              <label className="relative inline-block w-14 h-8">
+              <label className="relative hidden lg:inline-block w-14 h-8">
                 <input
                   type="checkbox"
                   checked={isDark}
@@ -152,7 +152,7 @@ const Navbar: React.FC = () => {
             menuOpen ? "right-0" : "-right-full"
           }`}
         >
-          <div className="flex h-[95vh] flex-col justify-between">
+          <div className="flex h-[90vh] flex-col justify-between">
             <div className="px-4 py-6">
               <div className="flex justify-between ite">
                 <img
@@ -198,6 +198,30 @@ const Navbar: React.FC = () => {
                   ))}
                 </ul>
               </nav>
+              <label className="mt-14 relative inline-block w-14 h-8">
+                <input
+                  type="checkbox"
+                  checked={isDark}
+                  onChange={toggleTheme}
+                  className="opacity-0 w-0 h-0 peer"
+                />
+                <span
+                  className="
+                    absolute cursor-pointer top-0 left-0 right-0 bottom-0
+                    bg-zinc-100 rounded-full transition-all duration-300
+                    peer-checked:bg-zinc-800
+                    before:content-[''] before:absolute
+                    before:h-6 before:w-6 before:rounded-full
+                    before:left-1 before:top-1/2 before:-translate-y-1/2
+                    before:bg-gradient-to-tr before:from-amber-400 before:to-amber-600
+                    before:transition-all before:duration-300
+                    peer-checked:before:left-[calc(100%-1.75rem)]
+                    peer-checked:before:bg-zinc-800
+                    peer-checked:before:bg-none
+                    peer-checked:before:shadow-[inset_-3px_-2px_5px_-2px_#FFB900,inset_-10px_-4px_0_0_#FFB900]
+                  "
+                ></span>
+              </label>
             </div>
           </div>
         </div>

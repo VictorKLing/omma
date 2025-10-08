@@ -24,6 +24,14 @@ export async function getHomeData() {
     subtitle,
     banner,
     button { text, href },
+    projetos[] {
+      titulo,
+      local,
+      area,
+      tempo,
+      descricao,
+      imagens[]
+    },
     section1 {
       sectionTitle,
       section1Text,
@@ -43,55 +51,6 @@ export async function getHomeData() {
       contato { title, backgroundImage, placeholders { name, phone, email, service, project }, disclaimer, buttonText }
     }
   }`;
-
-  const data = await sanityClient.fetch(query);
-  return data;
-}
-
-// ===============================
-// FUNÇÃO PARA QUEM SOMOS
-// ===============================
-export async function getQuemSomosData() {
-  const query = `*[_type == "quem-somos"][0]{
-    blocos[]{
-      titulo,
-      conteudo[]{
-        _type == "block" => { children[] { text } }
-      },
-      imagens
-    },
-    callToAction {
-      text,
-      href
-    }
-  }`;
-
-  
-
-  const data = await sanityClient.fetch(query);
-  return data;
-}
-
-
-// ===============================
-// FUNÇÃO PARA ATUAÇÂO
-// ===============================
-export async function getAtuacao() {
-  const query = `*[_type == "atuacao"][0]{
-    blocos[]{
-      titulo,
-      conteudo[]{
-        _type == "block" => { children[] { text } }
-      },
-      imagens
-    },
-    callToAction {
-      text,
-      href
-    }
-  }`;
-
-  
 
   const data = await sanityClient.fetch(query);
   return data;
